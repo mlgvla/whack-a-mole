@@ -1,4 +1,3 @@
-
 // DOM variables
 
 // get all the divs with class "hole"
@@ -25,7 +24,7 @@ let score = 0
 startBtn.addEventListener("click", startGame)
 
 // attach a click event to EACH mole that uses the callback function that whacks a mole
-moles.forEach(mole => mole.addEventListener('click', whack))
+moles.forEach((mole) => mole.addEventListener("click", whack))
 
 // Functions
 
@@ -43,15 +42,14 @@ function randomHole(holes) {
    return hole
 }
 
-
 function peep() {
    const time = randomTime(500, 1500)
    const hole = randomHole(holes)
-   hole.classList.add('up')
+   hole.classList.add("up")
    setTimeout(() => {
-      hole.classList.remove('up')
-      if(!timeUp) peep()
-   }, time);
+      hole.classList.remove("up")
+      if (!timeUp) peep()
+   }, time)
 }
 
 // Callback Functions
@@ -64,12 +62,33 @@ function startGame() {
    peep()
    setTimeout(() => {
       timeUp = true
-   }, 20000)
+   }, 10000)
 }
 
 function whack(e) {
    if (!e.isTrusted) return // we only want user clicks - not bot clicks!
    score++
-   e.target.parentNode.classList.remove("up") 
+   e.target.parentNode.classList.remove("up")
    scoreboard.textContent = score
+}
+
+// Selecting the image - using the "change" event
+
+const radioBtns = document.getElementsByName("image")
+
+radioBtns.forEach((btn) => {
+   btn.addEventListener("change", (e) => {
+      if (e.target.value === "jay-image") {
+         changeImage("images/jay.png")
+      } else {
+         changeImage("./images/mole.svg")
+      }
+   })
+})
+
+function changeImage(imageURL) {
+   moles.forEach((mole) => {
+      mole.style.background = `url(${imageURL}) bottom center no-repeat`
+      mole.style.backgroundSize = "50%"
+   })
 }

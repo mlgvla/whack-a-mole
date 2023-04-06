@@ -61,7 +61,7 @@ h1 {
 }
 
 .mole {
-    background: url("./images/jay-removebg-preview.png") bottom center no-repeat;
+    background: url("./images/jay.png") bottom center no-repeat;
     background-size: 50%;
     position: absolute;
     top: 100%;
@@ -80,4 +80,11 @@ h1 {
     border: red;
     font-size: 3rem;
     cursor: pointer;
+}
+
+fieldset {
+    margin: auto;
+    width: 150px;
+    margin-top: 50px;
+    font-size: x-large;
 }
