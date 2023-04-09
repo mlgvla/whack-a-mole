@@ -6,8 +6,8 @@ const holes = document.querySelectorAll(".hole")
 // get all the divs with class "mole"
 const moles = document.querySelectorAll(".mole")
 
-// get the button with the class "start"
-const startBtn = document.querySelector(".startBtn")
+// get the button with the id "start_btn"
+const startBtn = document.querySelector("#start_btn")
 
 // get the scoreboard - the div with the class "score"
 const scoreboard = document.querySelector(".score")
