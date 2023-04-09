@@ -61,7 +61,7 @@ h1 {
 }
 
 .mole {
-    background: url("./images/jay.png") bottom center no-repeat;
+    background: url("./images/mole.svg") bottom center no-repeat;
     background-size: 50%;
     position: absolute;
     top: 100%;
@@ -87,4 +87,11 @@ fieldset {
     width: 150px;
     margin-top: 50px;
     font-size: x-large;
+}
+.game_length {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: x-large;
+    font-weight: bold;
 }

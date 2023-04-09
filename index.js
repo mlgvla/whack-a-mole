@@ -12,6 +12,8 @@ const startBtn = document.querySelector(".startBtn")
 // get the scoreboard - the div with the class "score"
 const scoreboard = document.querySelector(".score")
 
+
+
 // Variables
 
 let lastHole
@@ -55,6 +57,7 @@ function peep() {
 // Callback Functions
 
 function startGame() {
+   const game_length = document.getElementById("game_length").value
    scoreboard.textContent = 0
    timeUp = false
    score = 0
@@ -62,7 +65,7 @@ function startGame() {
    peep()
    setTimeout(() => {
       timeUp = true
-   }, 10000)
+   }, parseInt(game_length))
 }
 
 function whack(e) {
@@ -78,10 +81,10 @@ const radioBtns = document.getElementsByName("image")
 
 radioBtns.forEach((btn) => {
    btn.addEventListener("change", (e) => {
-      if (e.target.value === "jay-image") {
-         changeImage("images/jay.png")
+      if (e.target.value === "mole-image") {
+         changeImage("images/mole.svg")
       } else {
-         changeImage("./images/mole.svg")
+         changeImage("./images/jay.png")
       }
    })
 })
