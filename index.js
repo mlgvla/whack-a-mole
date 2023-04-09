@@ -66,7 +66,7 @@ function startGame() {
    // ??
    setTimeout(() => {
       timeUp = true
-   }, parseInt(10000))
+   }, 10000)
 }
 
 function whack(e) {
@@ -85,7 +85,7 @@ function whack(e) {
 const radioBtns = ""
 
 // 2. For each radio button, add an event listener that uses the "change event"
-   // The event handler should use the target value to determine which image
+   // The event handler should use the event's target value property to determine which image
    // to invoke the changeImage function with
 
 /// YOUR CODE HERE
