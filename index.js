@@ -1,17 +1,19 @@
 // DOM variables
 
-// get all the divs with class "hole"
-const holes = document.querySelectorAll(".hole")
+// 1. get ALL the divs with class "hole"
 
-// get all the divs with class "mole"
-const moles = document.querySelectorAll(".mole")
+const holes = ""
 
-// get the button with the class "start"
-const startBtn = document.querySelector(".startBtn")
+// 2. get ALL the divs with class "mole"
 
-// get the scoreboard - the div with the class "score"
-const scoreboard = document.querySelector(".score")
+const moles = ""
 
+// 3. get the button with the class "start"
+
+const startBtn = ""
+
+// 4. get the scoreboard - the div with the class "score"
+const scoreboard = ""
 
 
 // Variables
@@ -22,11 +24,11 @@ let score = 0
 
 // Event Listeners
 
-// attach a click event listener to the startBtn that uses the  callback function that starts the game
-startBtn.addEventListener("click", startGame)
+// 5. attach a click event listener to the startBtn that uses the  callback function that starts the game
 
-// attach a click event to EACH mole that uses the callback function that whacks a mole
-moles.forEach((mole) => mole.addEventListener("click", whack))
+
+// 6. attach a click event to EACH mole that uses the callback function that whacks a mole
+
 
 // Functions
 
@@ -57,15 +59,14 @@ function peep() {
 // Callback Functions
 
 function startGame() {
-   const game_length = document.getElementById("game_length").value
    scoreboard.textContent = 0
    timeUp = false
    score = 0
-   //what function needs to be called so the moles can start to appear?
-   peep()
+   // 7. what function needs to be called so the moles can start to appear?
+   // ??
    setTimeout(() => {
       timeUp = true
-   }, parseInt(game_length))
+   }, parseInt(10000))
 }
 
 function whack(e) {
@@ -75,19 +76,21 @@ function whack(e) {
    scoreboard.textContent = score
 }
 
+// BONUS #1
+
 // Selecting the image - using the "change" event
 
-const radioBtns = document.getElementsByName("image")
+// 1. Get all the radio buttons by the name attribute
 
-radioBtns.forEach((btn) => {
-   btn.addEventListener("change", (e) => {
-      if (e.target.value === "mole-image") {
-         changeImage("images/mole.svg")
-      } else {
-         changeImage("./images/jay.png")
-      }
-   })
-})
+const radioBtns = ""
+
+// 2. For each radio button, add an event listener that uses the "change event"
+   // The event handler should use the target value to determine which image
+   // to invoke the changeImage function with
+
+/// YOUR CODE HERE
+
+
 
 function changeImage(imageURL) {
    moles.forEach((mole) => {
@@ -95,3 +98,5 @@ function changeImage(imageURL) {
       mole.style.backgroundSize = "50%"
    })
 }
+
+
