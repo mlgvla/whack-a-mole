@@ -8,11 +8,12 @@ const holes = ""
 
 const moles = ""
 
-// 3. get the button with the class "start"
+// 3. get the button with the id "start_btn"
 
 const startBtn = ""
 
 // 4. get the scoreboard - the div with the class "score"
+
 const scoreboard = ""
 
 
