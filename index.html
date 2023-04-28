@@ -6,17 +6,19 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./style.css" />
 
-      <script src="./index.js" defer ></script>
+      <script src="./index.js" defer></script>
       <title>Whack-A-Mole!</title>
    </head>
    <body>
       <h1>Whack-A-Mole!</h1>
       <h1 class="score">0</h1>
-      <div class="start"><button class="startBtn" id="start_btn">Start!</button></div>
+      <div class="start">
+         <button class="start-btn" id="start-btn">Start!</button>
+      </div>
 
-      <!-- <div class="game_length">
-         <label for="game_length">Game Length:&nbsp;</label>
-         <select name="game_length" id="game_length">
+      <!-- <div class="game-length">
+         <label for="game-length">Game Length:&nbsp;</label>
+         <select name="game-length" id="game-length">
             <option value="10000" selected >10 seconds</option>
             <option value="20000">20 seconds</option>
             <option value="30000">30 seconds</option>
@@ -53,14 +55,22 @@
          </div>
       </div>
 
-      <!-- <fieldset>
+      <fieldset>
          <legend>Whack</legend>
-         <input type="radio" name="image" value="mole-image" id="mole_image" checked>
-         <label for="mole-image">Mole</label>
-         <input type="radio" name="image" value="jay-image" id="jay_image">
-         <label for="jay-image">Jay</label>
-      </fieldset> -->
-
-
+         <div>
+            <input
+               type="radio"
+               name="image"
+               value="mole-image"
+               id="mole-image"
+               checked
+            />
+            <label for="mole-image">Mole</label>
+         </div>
+         <div>
+            <input type="radio" name="image" value="tom-image" id="tom-image" />
+            <label for="tom-image">Tom</label>
+         </div>
+      </fieldset>
    </body>
 </html>

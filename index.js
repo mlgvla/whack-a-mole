@@ -1,6 +1,6 @@
 // DOM variables
 
-// 1. get ALL the divs with class "hole"
+// 1. get ALL the divs with class "hole" (Replace quotes with a document query method)
 
 const holes = ""
 
@@ -8,7 +8,7 @@ const holes = ""
 
 const moles = ""
 
-// 3. get the button with the id "start_btn"
+// 3. get the button with the id "start-btn"
 
 const startBtn = ""
 

@@ -75,7 +75,7 @@ h1 {
 }
 /* make a nicer button that is animated */
 
-.startBtn {
+.start-btn {
     background: rgba(190, 19, 19, 0.2);
     border: red;
     font-size: 3rem;
@@ -83,12 +83,14 @@ h1 {
 }
 
 fieldset {
-    margin: auto;
-    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto auto;
+    width: 15%;
     margin-top: 50px;
     font-size: x-large;
 }
-.game_length {
+.game-length {
     display: flex;
     justify-content: center;
     margin-top: 20px;
